@@ -4,7 +4,7 @@ import React from 'react'
 // Icons
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
-function Header({searchTerm, setSearchTerm, search, setSearch}) {
+function Header({searchTerm, setSearchTerm}) {
   return (
     <div className="bg-blue-50 rounded-xl shadow-lg m-3 p-3 flex">
         <div className='bg-white rounded-xl shadow-md'>

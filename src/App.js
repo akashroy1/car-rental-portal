@@ -12,14 +12,13 @@ function App() {
 
   const [ pageNumber, setPageNumber ] = useState(1);
   const [ searchTerm, setSearchTerm ] = useState("");
-  const [ search, setSearch ] = useState(false);
 
   return (
     <div className="Home">
       
-      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} search={search} />
+      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm}  />
       
-      <Cars pageNumber={pageNumber} search={search} setSearch={setSearch}  searchTerm={searchTerm} />
+      <Cars pageNumber={pageNumber}  searchTerm={searchTerm} />
       
       <Footer setPageNumber={setPageNumber}/>
 

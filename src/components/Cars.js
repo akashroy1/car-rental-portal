@@ -6,7 +6,7 @@ import carsData from "../data/cars.json";
 // Importing Components
 import CarCard from './CarCard';
 
-function Cars({pageNumber, searchTerm, search}) {
+function Cars({pageNumber, searchTerm}) {
 
     const [ filteredCars, setFilteredCars ] = useState([]);
     const [ paginatededCars, setPaginatedCars ] = useState([]);

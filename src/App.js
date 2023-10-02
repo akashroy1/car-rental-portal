@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import carsData from "./data/cars.json";
+
+// Importing Components
+import CarCard from './components/CarCard';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Home">
+      
+      <Header />
+      
+      <div className='bg-blue-50 m-2 grid grid-cols-3 gap-2 rounded-xl'>
+        {carsData.map((car, index)=>{
+          return <CarCard car={car} key={index} />
+        })}
+      </div>
+
+      
+      <Footer />
+
     </div>
   );
 }

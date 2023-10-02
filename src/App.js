@@ -1,28 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import carsData from "./data/cars.json";
+
 
 // Importing Components
-import CarCard from './components/CarCard';
 import Header from './components/Header';
+import Cars from './components/Cars';
 import Footer from './components/Footer';
 
 
 function App() {
 
+  const [ pageNumber, setPageNumber ] = useState(1);
+  const [ searchTerm, setSearchTerm ] = useState("");
+  const [ search, setSearch ] = useState(false);
+
   return (
     <div className="Home">
       
-      <Header />
+      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} search={search} />
       
-      <div className='bg-blue-50 m-2 grid grid-cols-3 gap-2 rounded-xl'>
-        {carsData.map((car, index)=>{
-          return <CarCard car={car} key={index} />
-        })}
-      </div>
-
+      <Cars pageNumber={pageNumber} search={search} setSearch={setSearch}  searchTerm={searchTerm} />
       
-      <Footer />
+      <Footer setPageNumber={setPageNumber}/>
 
     </div>
   );

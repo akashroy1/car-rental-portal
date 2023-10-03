@@ -57,4 +57,8 @@ car-rental-portal/
 2. Use the search bar to search for cars by name.
 3. Use the pagination to navigate through the list of cars.
 
+## This is how the website looks like
 
+![Header](./images/Task1.png)
+
+![Footer](./images/Task2.png)
